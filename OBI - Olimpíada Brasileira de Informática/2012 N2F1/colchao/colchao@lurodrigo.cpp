@@ -4,7 +4,7 @@
     Nível 2, Fase 1, 2012
     Problema: Colchão
     
-    Data de submissão: 30/03/2012
+    Data de submissão: 31/03/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
     Tags: ad-hoc, geometria, comparações
     Complexidade: O(1)
