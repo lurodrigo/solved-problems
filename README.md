@@ -25,7 +25,7 @@ Os nomes dos arquivos de código-fonte não devem possuir espaços, limitando ao
 caracteres maiúsculos (A-Z), minúsculos (a-z), traços (-), underlines
 (_) e pontos (.). O padrão é o que segue:
     
-    username_do_autor@[versao.]identificador_da_questao.extensao
+    identificador_da_questao@[versao.]username_do_autor.extensao
     
 A versão é opcional, apenas para o caso de o autor desejar submeter mais de 
 uma solução para o mesmo problema. Na pasta de cada problema deve haver 
