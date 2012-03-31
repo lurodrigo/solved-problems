@@ -1,4 +1,15 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2008
+    Problema: Frete da Família Silva
+    
+    Data de submissão: 29/03/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: grafos, algoritmos-gulosos, arvore-custo-minimo, algoritmo-prim
+    Complexidade: O(N²)
+*/
+
 #include <cstdio>
 using namespace std;
 

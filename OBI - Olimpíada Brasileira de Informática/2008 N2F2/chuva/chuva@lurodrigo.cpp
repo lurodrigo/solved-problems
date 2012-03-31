@@ -4,6 +4,7 @@
     Nível 2, Fase 2, 2008
     Problema: Chuva
     
+    Data de submissão: 30/03/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
     Tags: grafos, algoritmos-gulosos, menor-caminho, algoritmo-dijkstra
     Complexidade: O(n²)

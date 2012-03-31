@@ -28,10 +28,8 @@ caracteres maiúsculos (A-Z), minúsculos (a-z), traços (-), underlines
     username_do_autor@[versao.]identificador_da_questao.extensao
     
 A versão é opcional, apenas para o caso de o autor desejar submeter mais de 
-uma solução para o mesmo problema.
-    
-Na pasta de cada problema deve haver um link para o problema original
-e conjuntos de teste. Os conjuntos de teste deverão seguir o formato a seguir:
+uma solução para o mesmo problema. Na pasta de cada problema deve haver 
+conjuntos de teste. Os conjuntos de teste deverão seguir o formato a seguir:
 
     identificador_da_questao.id_conjunto_teste.in
     

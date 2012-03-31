@@ -1,4 +1,16 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2008
+    Problema: Frete da Família Silva
+    
+    Data de submissão: 29/03/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: union-find, conjuntos-disjuntos, grafos, algoritmos-gulosos, 
+        arvore-custo-minimo, algoritmo-kruskal
+    Complexidade: O(M log M)
+*/
+
 #include <cstdio>
 #include <list>
 using namespace std;

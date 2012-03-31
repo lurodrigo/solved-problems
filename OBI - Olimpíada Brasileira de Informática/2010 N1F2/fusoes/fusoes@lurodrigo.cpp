@@ -1,4 +1,15 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2008
+    Problema: Chuva
+    
+    Data de submissão: 29/03/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: union-find, conjuntos-disjuntos
+    Complexidade: O(m)
+*/
+
 #include <iostream>
 using namespace std;
 

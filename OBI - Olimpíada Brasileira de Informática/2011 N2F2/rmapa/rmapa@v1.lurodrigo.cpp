@@ -1,4 +1,16 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2011
+    Problema: Reduzindo detalhes de um mapa
+    
+    Data de submissão: 30/03/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: union-find, conjuntos-disjuntos, grafos, arvore-menor-caminho, 
+        algoritmo-kruskal
+    Complexidade: O(M log N)
+*/
+
 #include <iostream>
 #include <cstdio>
 #include <list>

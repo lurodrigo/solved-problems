@@ -1,4 +1,15 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2011
+    Problema: Reduzindo detalhes de um mapa
+    
+    Data de submissão: 30/03/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: grafos, arvore-custo-minimo, algoritmos-gulosos, algoritmo-prim
+    Complexidade: O(N²)
+*/
+
 #include <iostream>
 #include <cstdio>
 using namespace std;

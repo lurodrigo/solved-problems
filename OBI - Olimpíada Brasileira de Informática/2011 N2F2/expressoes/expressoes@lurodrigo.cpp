@@ -1,4 +1,15 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2011
+    Problema: Expressões
+    
+    Data de submissão: 29/03/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: pilha, string
+    Complexidade: O(sigma(|s|)) (a soma do tamanho de todas as strings)
+*/
+
 #include <cstdio>
 #include <stack>
 using namespace std;
