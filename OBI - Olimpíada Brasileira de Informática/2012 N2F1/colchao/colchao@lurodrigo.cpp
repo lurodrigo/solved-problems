@@ -24,7 +24,7 @@ int main() {
     cin >> a >> b >> c >> h >> l;
     
     if ( passa(h, l, a, b) || passa(h, l, a, c) ||
-            passa(h, l, b, a) || passa(h, l, a, c) ||
+            passa(h, l, b, a) || passa(h, l, b, c) ||
             passa(h, l, c, a) || passa(h, l, c, b) ) 
         cout << "S";
     else
