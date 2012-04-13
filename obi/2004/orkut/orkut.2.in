@@ -1,0 +1,24 @@
+5
+gravata cueca blusa calca cinto
+cueca 0
+calca 1 cueca
+cinto 2 calca cueca
+blusa 0
+gravata 1 blusa
+5
+app setup kernel post db
+app 2 kernel db
+kernel 1 post
+post 1 setup
+setup 0
+db 1 kernel
+3
+luiz rodrigo souza
+luiz 0
+rodrigo 0
+souza 0
+3 luiz rodrigo souza
+luiz 1 rodrigo
+rodrigo 1 souza
+souza 1 luiz
+0
