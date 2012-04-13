@@ -8,7 +8,7 @@
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
     Tags: grafos, ordenacao-topologica, busca-em-profundidade, mapas
     Complexidade: O((v + e)*log(v))
-    Versão 1: Usando busca em largura recursiva e mapa.
+    Versão 1: Usando busca em largura com pilha e mapa.
 */
 
 #include <iostream>
