@@ -57,7 +57,7 @@ int main() {
         }
     }
     
-    if ( n ! count ) 
+    if ( n != count ) 
         cout << '*';
     else 
         for (i = 0; i < n; i++)
