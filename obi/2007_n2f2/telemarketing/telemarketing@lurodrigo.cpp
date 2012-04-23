@@ -6,7 +6,7 @@
     
     Data de submissão: 12/04/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
-    Tags: filas
+    Tags: fila-de-prioridade
     Complexidade: O(l*log(v))
 */
 
