@@ -4,7 +4,7 @@
     2005, Nível 2
     Problema: Pedido de desculpas
     
-    Data de submissão: 12/04/2012
+    Data de submissão: 27/04/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
     Tags: programacao-dinamica, knapsack
     Complexidade: O(nt) (por caso de teste)
