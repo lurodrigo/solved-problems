@@ -1,25 +1,21 @@
-To-do GRAFOS:
+To-do:
 
 Resolver:
 
     Seletiva IOI 2001:
-        Batuíra: dijkstra simples
         Ambulância: listar todos os caminhos
-       
-    Seletiva IOI 2002:
-        Passeio: Maior caminho num DAG
         
     Seletiva IOI 2003:
         Manutenção: Vértices de articulação
-        
-    Seletiva IOI 2005 I:
-        Problema C: Buracos de minhoca
-        
-        - Verificar se um grafo direcionado é conexo
-            - ver se o número de SCCs é 1    
-        
+
     Nível 2 Fase 2 2007: 
         Labirinto
+     
+    Amanhã!!! 
+     
+    Competição de chocolate
+    Sequências
+    Vira
         
         
 Não-pra-agora:
@@ -27,7 +23,5 @@ Não-pra-agora:
         Tarefa B: Caixeiro Viajante
     Seletiva IOI 2005 II:
         Tarefa B: Caixeiro Viajante
-    Seletiva IOI 2006:
-        Teletransporte
-    Seletiva IOI 2007 Final:
-        Viagem aérea: Dijkstra Generalizado
+
+

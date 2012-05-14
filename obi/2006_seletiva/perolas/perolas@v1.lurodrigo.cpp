@@ -14,19 +14,14 @@
 #include <cstdio>
 #include <list>
 #include <stack>
+#include <algorithm>
 using namespace std;
 
-Node {
+struct Node {
     bool visited;
     list<int> in, out, is_lesser, is_greater;
     list<int>::iterator it;
 } p[100];
-
-void inplace_union(list<int> &a, list<int> &b) {
-    list<int> aux;
-    set_union(a.begin(), a.end(), b.begin(), b.end(), aux);
-    a = aux;
-}
 
 void visit(int i, list<int> &sorted) {
     stack<int> s;
@@ -61,11 +56,38 @@ void topological_sort(int n, list<int> &sorted) {
             visit(i, sorted);
 }
 
+void print(list<int> &l) {
+    for (list<int>::iterator it = l.begin(); it != l.end(); it++)
+        cout << *it << " ";
+    cout << endl;
+}
+
+void inplace_union(list<int>& a, list<int>& b)
+{
+    /*
+    int mid = a.size();
+    std::copy(b.begin(), b.end(), std::back_inserter(a));
+    std::inplace_merge(a.begin(), a.begin() + mid, a.end());
+    a.erase(std::unique(a.begin(), a.end()), a.end());
+    */
+    list<int> aux(100);
+    printf("a: ");
+    print(a);
+    printf("b: ");
+    print(b);
+    set_union(a.begin(), a.end(), b.begin(), b.end(), aux.begin());
+    printf("aux: ");
+    print(aux);
+    a.clear();
+    copy(aux.begin(), aux.end(), a.begin());
+}
+
 int main() {
 
     int n, m, u, v, i;
-    list<int> sorted;
+    list<int> sorted, aux;
     list<int>::iterator it, jt;
+    list<int>::reverse_iterator rt;
     
     cin >> n >> m;
     
@@ -78,23 +100,22 @@ int main() {
     topological_sort(n, sorted);
     
     for (it = sorted.begin(); it != sorted.end(); it++) {
-        p[*it].is_lower = p[*it].in;
-        p[*it].is_lower.sort();
-        
+        p[*it].is_lesser = p[*it].in;
+        p[*it].is_lesser.sort();
         for (jt = p[*it].in.begin(); jt != p[*it].in.end(); jt++)
-            inplace_union(p[*it].is_lower(), p[*it].is_lower());
+            inplace_union(p[*it].is_lesser, p[*jt].is_lesser);
     }
     
-    for (it = sorted.rbegin(); it != sorted.rend(); it++) {
-        p[*it].is_greater = p[*it].out;
-        p[*it].is_greater.sort();
+    for (rt = sorted.rbegin(); rt != sorted.rend(); rt++) {
+        p[*rt].is_greater = p[*rt].out;
+        p[*rt].is_greater.sort();
         
-        for (jt = p[*it].out.begin(); jt != p[*it].out.end(); jt++)
-            inplace_union(p[*it].is_greater, p[*jt].is_greater);
+        for (jt = p[*rt].out.begin(); jt != p[*rt].out.end(); jt++)
+            inplace_union(p[*rt].is_greater, p[*jt].is_greater);
     }
     
     for (i = 1; i <= n; i++)
-        if ( p[i].is_lower.size() > n/2 || p[i].is_greater.size() > n/2 )
+        if ( p[i].is_lesser.size() > n/2 || p[i].is_greater.size() > n/2 )
             cout << i << " ";
         
     return 0;
