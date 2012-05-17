@@ -9,6 +9,7 @@
 *.so
 *.do
 *.obj
+*.todo
 .DS_Store*
 ehthumbs.db
 Icon?
