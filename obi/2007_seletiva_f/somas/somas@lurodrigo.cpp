@@ -7,7 +7,7 @@
     Data de submissão: 13/04/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
     Tags: grafos, busca-em-largura, busca-binaria, grafos-bipartidos
-    Complexidade: O(n*m*log n)
+    Complexidade: O(n*m)
 */
 
 #include <iostream>
@@ -25,24 +25,6 @@ struct Node {
 
 bool byValue(Node a, Node b) {
     return a.value < b.value;
-}
-
-int binarySearch(int i, int j, int value) {
-    int m;
-    
-    while ( i <= j ) {
-        m = (i + j) / 2;
-        
-        if ( nodes[m].value == value ) {
-            return m;
-        }
-        else if ( nodes[m].value < value )
-            i = m + 1;
-        else
-            j = m - 1;
-    }
-    
-    return -1;
 }
 
 bool bfs(int n, int &set1, int o) {
@@ -86,7 +68,7 @@ bool isBipartite(int n, int& set1) {
 }
 
 int main() {
-    int i, j, k, f, n, m, set1;
+    int i, j, k, f, n, m, set1, beg, end;
     
     cin >> n >> m;
     
@@ -98,11 +80,16 @@ int main() {
     for (i = 0; i < m; i++) {
         cin >> f;
         
-        for (j = 0; j < n && nodes[j].value <= f/2; j++)
-            if ( (k = binarySearch(j+1, n-1, f-nodes[j].value)) != -1 ) {
-                nodes[j].adj.push_back(k);
-                nodes[k].adj.push_back(j);
-            }
+        for (beg = 0, end = n-1; beg < end; )
+            if ( nodes[beg].value + nodes[end].value < f ) 
+                beg++;
+            else if ( nodes[beg].value + nodes[end].value > f )
+                end--;
+            else {
+                nodes[beg].adj.push_back(end);
+                nodes[end].adj.push_back(beg);
+                beg++, end--;
+            } 
     }
     
     if ( isBipartite(n, set1) ) {
