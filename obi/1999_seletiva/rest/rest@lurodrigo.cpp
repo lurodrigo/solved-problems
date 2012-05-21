@@ -2,11 +2,11 @@
 /*
     Olimpíada Brasileira de Informática
     Seletiva para a IOI, 1999
-    Problema: Pizza
+    Problema: Restaurante
     
     Data de submissão: 13/04/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
-    Tags: heap
+    Tags: ordenação, simulação
     Complexidade: O(n log n)
 */
 
