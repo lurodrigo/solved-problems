@@ -13,6 +13,7 @@
 */
 
 #include <iostream>
+#include <cstdio>
 #include <algorithm>
 #include <vector>
 using namespace std;
@@ -40,7 +41,7 @@ int extract_min(int n) {
     
     for (min = 0; cities[min].visited; min++);
     for (i = min+1; i < n; i++)
-        if ( cities[i].key < cities[min].key )
+        if ( !cities[i].visited && cities[i].key < cities[min].key )
             min = i;
             
     cities[min].visited = true;
@@ -50,7 +51,6 @@ int extract_min(int n) {
 int countWays[101];
 
 int main() {
-
     int n, p, e, i, j, u, v, l, time = 0;
     
     cin >> n >> p >> e;
@@ -62,14 +62,14 @@ int main() {
             countWays[i] += countWays[i-l];
     }
     
+    init(n, 0);
     for (i = 0; i < e; i++) {
         cin >> u >> v >> l;
         u--; v--;
         if ( countWays[l] > 0 )
             cities[u].dist[v] = cities[v].dist[u] = countWays[l];
     }
-    
-    init(n, 0);
+
     for (i = 0; i < n; i++) {
         u = extract_min(n);
         
@@ -80,10 +80,8 @@ int main() {
             
         time += cities[u].key;
         
-        for (j = 0; j < n; j++) {
+        for (j = 0; j < n; j++)
             cities[j].key = min(cities[j].key, cities[u].dist[j]);
-            cout << cities[i].key << " ";
-        }
     }
 
     cout << time;
