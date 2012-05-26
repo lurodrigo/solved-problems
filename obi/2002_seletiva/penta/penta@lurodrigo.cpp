@@ -6,7 +6,7 @@
     
     Data de submissão: 22/05/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
-    Tags: ad-hoc
+    Tags: gulosos
     Complexidade: O(n)
 */
 

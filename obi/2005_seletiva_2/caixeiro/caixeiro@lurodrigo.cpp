@@ -7,24 +7,21 @@
     Data de submissão: 25/05/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
     Tags: grafos, busca-em-profundidade
-    Complexidade: O(n log n)
+    Complexidade: O(n)
 */
 
 #include <iostream>
 #include <cstdio>
-#include <set>
 using namespace std;
 
 struct Node {
     int cost, nadj;
-    bool visited;
+    bool visited, mandatory;
     int adj[300];
 } nodes[300];
 
-set<int> to_visit;
-
 int cost_node(int u) {
-    return (to_visit.find(u) != to_visit.end()) ? 2 : 0;
+    return (nodes[u].mandatory) ? 2 : 0;
 }
 
 int dfs(int u) {
@@ -43,7 +40,7 @@ int dfs(int u) {
 
 int main() {
 
-    int n, m, i, x, u, v, teste=1;
+    int n, m, i, u, v, teste=1;
     
     while (true) {
         cin >> n >> m;
@@ -51,10 +48,10 @@ int main() {
         if ( n == 0 ) 
             break;
         
-        to_visit.clear();
         for (i = 0; i < n; i++) {
             nodes[i].nadj = 0;
             nodes[i].visited = false;
+            nodes[i].mandatory = false;
         }
         
         for (i = 0; i < n-1; i++) {
@@ -65,8 +62,8 @@ int main() {
         }
         
         for (i = 0; i < m; i++) {
-            cin >> x;
-            to_visit.insert(--x);
+            cin >> u;
+            nodes[--u].mandatory = true;
         }
         
         printf("Teste %d\n%d\n\n", teste++, dfs(0) - 2);
