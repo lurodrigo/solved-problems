@@ -1,4 +1,15 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2012
+    Problema: Banco
+    
+    Data de submissão: 12/05/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: ad-hoc, filas-de-prioridade
+    Complexidade: O(n log n)
+*/
+
 #include <iostream>
 #include <queue>
 using namespace std;

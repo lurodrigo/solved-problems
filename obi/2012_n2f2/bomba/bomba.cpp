@@ -1,4 +1,15 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2012
+    Problema: Bomba
+    
+    Data de submissão: 12/05/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: grafos, busca-em-largura, grafos-multicamada
+    Complexidade: O(n+m)
+*/
+
 #include <iostream>
 #include <list>
 #include <queue>

@@ -1,4 +1,18 @@
 
+/*
+    Olimpíada Brasileira de Informática
+    Nível 2, Fase 2, 2012
+    Problema: Somas
+    
+    Data de submissão: 12/05/2012
+    Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
+    Tags: busca-binaria
+    Complexidade: O(n log n)
+    
+    Ps: existe um algoritmo bem simples com complexidade O(n), o qual
+    não utilizei simplesmente por não ser necessário dado o tamanho da entrada
+*/
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
