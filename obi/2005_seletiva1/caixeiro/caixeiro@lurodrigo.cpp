@@ -6,7 +6,7 @@
     
     Data de submissão: 26/05/2012
     Autor da solução: Luiz Rodrigo <@lurodrigo> <luizrodri.go@hotmail.com>
-    Tags: grafos, programacao-dinamica, ordenacao-topologica
+    Tags: grafos, programacao-dinamica, lcs
     Complexidade: O(n³)
 */
 
