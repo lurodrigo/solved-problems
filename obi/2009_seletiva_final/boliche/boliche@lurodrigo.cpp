@@ -17,6 +17,10 @@ using std::string;
 
 enum Tipo { NORMAL, SPARE, STRIKE };
  
+int to_int(char c) {
+    return (c == '-') ? 0 : c-'0';
+}
+ 
 int main() {
 
     string jogada;
@@ -27,10 +31,7 @@ int main() {
         cin >> jogada;
         
         for (j = 0, emPe = 10; j < jogada.length(); j++, k++) {
-            if ( jogada[j] == '-' ) {
-                bola[k] = 0;
-                tipo[k] = NORMAL;
-            } else if ( jogada[j] == 'X' ) {
+            if ( jogada[j] == 'X' ) {
                 bola[k] = 10;
                 tipo[k] = STRIKE;
                 emPe = 10;
@@ -39,9 +40,9 @@ int main() {
                 tipo[k] = SPARE;
                 emPe = 10;
             } else {
-                bola[k] = jogada[j] - '0';
+                bola[k] = to_int(jogada[j]);
                 tipo[k] = NORMAL;
-                emPe -= jogada[j] - '0';
+                emPe -= to_int(jogada[j]);
             }
             
             if ( i == 9 )
