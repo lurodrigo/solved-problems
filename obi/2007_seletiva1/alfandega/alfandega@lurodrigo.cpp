@@ -47,11 +47,6 @@ int main() {
         total += preco[i];
     }
     
-    if ( total >= 6*cota ) { // nesse caso, não há o que minimizar
-        mostra(imposto(total-3*cota, total-3*cota));
-        return 0;
-    }
-    
     possivel[0][0] = true;
     pares[0] = Par(0, 0);
     num_pares = 1;
