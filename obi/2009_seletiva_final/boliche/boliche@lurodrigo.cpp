@@ -11,9 +11,7 @@
 */
 
 #include <iostream>
-#include <string>
 using namespace std;
-using std::string;
 
 enum Tipo { NORMAL, SPARE, STRIKE };
  
@@ -23,14 +21,14 @@ int to_int(char c) {
  
 int main() {
 
-    string jogada;
+    char jogada[5];
     int bola[21], tipo[21];
     int i, j, k, emPe, total = 0;
     
     for (i = k = 0; i < 10; i++) {
         cin >> jogada;
         
-        for (j = 0, emPe = 10; j < jogada.length(); j++, k++) {
+        for (j = 0, emPe = 10; jogada[j]; j++, k++) {
             if ( jogada[j] == 'X' ) {
                 bola[k] = 10;
                 tipo[k] = STRIKE;
