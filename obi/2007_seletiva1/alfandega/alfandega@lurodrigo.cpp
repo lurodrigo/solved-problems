@@ -32,6 +32,7 @@ int imposto(int set1, int set2) {
 
 void mostra(int imp) {
     int val = aliquota * imp;
+    // trick para evitar usar aritmética de ponto flutuante
     printf("%d.%02d\n", val / 100, val % 100);
 }
 
