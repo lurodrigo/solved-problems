@@ -1,0 +1,67 @@
+
+:::: STRING MATCHING
+
+1999 - Projeto Genoma
+
+:::: PROGRAMAÇÃO DINÂMICA | GULOSOS
+
+1999 - Jogo de Búzios
+2000 - Balaios
+2002 - Dominó
+2006 N2F2: Sequências
+    
+    x[:i] é d-dependente de y[:j] se
+        - x[:i-1] é d-dependente de y[:j]
+        - existe um k <= j tal que
+            - x[i] = y[k]
+            - x[:i-1] é (d-1)-dependente de y[:k-1]
+            
+    Falta analisar:
+        Casos-base (d-dependencia onde i < d)
+
+2006 - Multisoma    
+2007 Teste I - Alfândega
+2009 N2F2: Competição de chocolate 
+2009 Teste Final - Ovo de Itu
+2010 N2F2: Altas Aventuras
+2011 N2F2: Vira!
+
+:::: GRAFOS
+
+2003 - Manutenção
+    vértices de articulação
+
+:::: BACKTRACKING
+
+2000 - Anéis quadrados
+    Como resolver:
+        cx[L][P] = conta quantas vezes a letra L aparece com x-coord P
+        cy[L][P] = conta quantas vezes a letra L aparece com y-coord P 
+        
+        pra cada letra, pegas as 2 x e y coordenadas com frequência.
+        gerar a equação dos quatro lados do quadrado
+        comparar os quadrados de todas as letras
+            - caso os quadrados tenham interseção, verificar
+            qual aparece por cima. a partir disso, construir DAG.
+            
+        Listar todas as ordenações topológicas do dag.
+
+2001 - Ambulância
+2003 - Festa Junina (backtracking, NP-hard)
+
+:::: GEOMETRIA COMPUTACIONAL
+
+1999 - RoboCoffee
+2003 - Elástico
+2005 Teste II - Mapas do gugo 
+2007 Teste III - Paralelogramos
+2008 Final - Tratamento a Laser
+2009 Teste II - Poda de árvores 
+2009 Teste III - Polenta frita
+2009 Final - O passeio do bispo
+
+:::: AD-HOC
+
+2009 Final - Boliche ~ trabalhosa
+
+Total: 24
