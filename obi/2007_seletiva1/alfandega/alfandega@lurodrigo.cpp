@@ -47,6 +47,11 @@ int main() {
         total += preco[i];
     }
     
+    if ( total > 6*cota ) {
+        mostra(imposto(cota, cota));
+        return 0;
+    }
+    
     possivel[0][0] = true;
     pares[0] = Par(0, 0);
     num_pares = 1;
