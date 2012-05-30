@@ -20,6 +20,8 @@
 #include <cstdio>
 using namespace std;
 
+// true: vértice existe
+// false: vértice não existe ou foi excluido
 bool exists[20]; 
 int g[20][20], ng[20], lexists[21];
 
